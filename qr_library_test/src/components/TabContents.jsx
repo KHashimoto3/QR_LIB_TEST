@@ -6,9 +6,12 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import { Generater } from './Generater';
+import { Scanner } from './Scanner';
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-  
+
     return (
       <div
         role="tabpanel"
@@ -56,10 +59,10 @@ export const TabContents = () => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        QR生成
+        <Generater />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        QR読み取り
+        <Scanner />
       </TabPanel>
     </Box>
     )
